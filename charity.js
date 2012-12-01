@@ -27,7 +27,7 @@ CHARITY = function(id){
 			},
 			error: function(j,t,e){
 				console.log("error loading charity: "+self.charityId);
-				window.location.pathname = "/index.php";
+				window.location.href = "/index.php";
 			}
 		});
 	};

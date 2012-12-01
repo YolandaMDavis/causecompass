@@ -35,7 +35,7 @@
  */
 var charityId = <?=$_GET["c"]?>;
 if(!charityId) {
-	window.location.pathname = "/index.php";
+	window.location.href = "/index.php";
 }
 
 CHARITY(charityId);
