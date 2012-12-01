@@ -16,7 +16,7 @@ CHARITY = function(id){
 	};
 	
 	self.ajax = function(){
-		$.ajax(
+		$.ajax({
 			url: self.ajaxUrl,
 			type: "POST",
 			data: {
@@ -29,7 +29,7 @@ CHARITY = function(id){
 				console.log("error loading charity: "+self.charityId);
 				window.location.pathname = "/index.php";
 			}
-		);
+		});
 	};
 	
 	self.populate = function(data){
