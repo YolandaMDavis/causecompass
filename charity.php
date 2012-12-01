@@ -54,12 +54,12 @@ CHARITY(charityId);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Google Chart API Tutorial </a>
+          <a class="brand" href="#">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="tutorial_barchart.html">Basic Charts</a></li>
-			  <li><a href="tutorial_event_tableandcolumnchart.html">Events and Dashboards</a></li>
-              <li><a href="tutorial_live_table.html">Real Time Charts</a></li>              
+              <li><a>Nav</a></li>
+			  <li><a>Nav</a></li>
+              <li><a>Nav</a></li>              
             </ul>
           </div>
         </div>
