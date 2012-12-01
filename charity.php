@@ -35,7 +35,7 @@
  */
 var charityId = <?=$_GET["c"]?>;
 if(!charityId) {
-	window.location.href = "/index.php";
+	window.location.href = "/";
 }
 
 CHARITY(charityId);
@@ -66,9 +66,12 @@ CHARITY(charityId);
       </div>
 </div>   
 <div class="container">
-	 <div id="name"></div>
-	 <div id="desc"></div>
-	 <div id="link"><a>Donate here!</a></div>
+	<label for="name">Charity Name</label>
+	<div id="name"></div>
+	<label for="desc">Description</label>
+	<div id="desc"></div>
+	<label for="link">Charity's site</label>
+	<div id="link"><a>Donate here!</a></div>
 </div>
 </body>
 </html>
