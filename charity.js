@@ -35,7 +35,7 @@ CHARITY = function(id){
 	self.populate = function(data){
 		$('#name').html(data.name);
 		$('#desc').html(data.longDescription);
-		$('#link').html(data.link);
+		$('#link a').attr('href', data.link);
 	};
 	
 	

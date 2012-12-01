@@ -68,7 +68,7 @@ CHARITY(charityId);
 <div class="container">
 	 <div id="name"></div>
 	 <div id="desc"></div>
-	 <div id="link"></div>
+	 <div id="link"><a>Donate here!</a></div>
 </div>
 </body>
 </html>
