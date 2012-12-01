@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
 <head>
 <meta charset="UTF-8">
@@ -6,11 +5,6 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
 <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"/>
 <link type="text/css" rel="stylesheet" href="jquery/jquery-bootstrap/jquery-ui-1.8.16.custom.css"/>
@@ -56,19 +50,3 @@
 </div>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Cause Compass</title>
-
-
-</head>
-<body>
-
-<p>TODO</p>
-
-
-</body>
-</html>
->>>>>>> 3edf0eb1b7c4a8ca7d008c4e0fc953f3a5f9c82b
