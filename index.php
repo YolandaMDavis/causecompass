@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
 <meta charset="UTF-8">
@@ -55,3 +56,19 @@
 </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cause Compass</title>
+
+
+</head>
+<body>
+
+<p>TODO</p>
+
+
+</body>
+</html>
+>>>>>>> 3edf0eb1b7c4a8ca7d008c4e0fc953f3a5f9c82b
