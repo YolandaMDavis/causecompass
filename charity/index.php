@@ -59,19 +59,15 @@ CHARITY(charityId);
           <a class="brand" href="#">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a>Nav</a></li>
-			  <li><a>Nav</a></li>
-              <li><a>Nav</a></li>              
+              <li><a href="#">About Us</a></li>			               
             </ul>
           </div>
         </div>
       </div>
 </div>   
-<div class="container" id="charityDescription">
-	<label for="name">Charity Name</label>
-	<div id="name"></div>
-	<label for="desc">Description</label>
-	<div id="desc"></div>
+<div class="container" id="charityDescription">		
+	<h1 id="name"></h1>	
+	<h3 id="desc"></h3>
 	<label for="phone">Phone Number</label>
 	<div id="phone"></div>
 	<label for="link">Charity's site</label>
