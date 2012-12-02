@@ -21,23 +21,24 @@ CHARITY = function(id){
 		console.log("pulling ajax from: "+self.ajaxUrl);
 		$.ajax({
 			url: self.ajaxUrl + self.charityId,
-			type: "POST",
+			dataType: "jsonp",
 			success: function(data){
 				console.log("ajax success!");
-				self.populate(data);
+				self.populate(data[0]);
 			},
 			error: function(j,t,e){
 				console.log("error loading charity: "+self.charityId);
-				window.location.href = "/";
+				//window.location.href = "/";
 			}
 		});
 	};
 	
 	self.populate = function(data){
 		console.log("populating data");
-		$('#name').html(data.name);
-		$('#desc').html(data.longDescription);
-		$('#link a').attr('href', data.link);
+		$('#name').html(data.charity_name);
+		$('#desc').html(data.additional_info);
+		$('#phone').html(data.phonenumber);
+		$('#link a').attr('href', data.website_link);
 	};
 	
 	

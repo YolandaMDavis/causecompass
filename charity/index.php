@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="/style.css"/>
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -35,7 +36,8 @@
  */
 var charityId = "<?=$_GET["c"]?>";
 if(!charityId) {
-	window.location.href = "/";
+	//window.location.href = "/";
+	console.log("error loading charity page");
 }
 
 CHARITY(charityId);
@@ -70,6 +72,8 @@ CHARITY(charityId);
 	<div id="name"></div>
 	<label for="desc">Description</label>
 	<div id="desc"></div>
+	<label for="phone">Phone Number</label>
+	<div id="phone"></div>
 	<label for="link">Charity's site</label>
 	<div id="link"><a>Donate here!</a></div>
 </div>
