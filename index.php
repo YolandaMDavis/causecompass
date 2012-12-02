@@ -88,6 +88,7 @@
 	  </div>  
 	</div>	
 	
+	<!--
 	<div id="page_count">
 	<?php
 
@@ -110,6 +111,7 @@
 		}
 	?>
 	</div>
+	-->
 	
 </div>
 

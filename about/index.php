@@ -55,7 +55,10 @@
 <div class="container" id="charityDescription">		
 	<h1>About Us</h1>
 	
-	<p>TODO</p>
+	<div>
+	<a href="http://www.rhok.org/problems/getting-more-funding-effective-nonprofits">RHoK problem statement</a>
+	
+	</div>
 </div>
 
  
