@@ -45,7 +45,7 @@ CHARITY(charityId);
 
 //yup a hack....but it's a hackthon!
 if(donationType == 2){
-	$('#donateBtn').removeAttr('hide');
+	$('#donateBtn').removeClass('hide');
 }
 </script>
 
