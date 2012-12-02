@@ -151,7 +151,13 @@ $(function() {
 				
 				</div>
 			</div>
-           
+			
+			<div class="control-group">
+            <label class="control-label">Please provide information on donated items:</label>
+
+            <div class="controls"><textarea rows="5" id="donationList"></textarea></div>
+            </div>
+			
 		    <div class="control-group">
             <label class="control-label">Schedule Pickup: </label>
 
