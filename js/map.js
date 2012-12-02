@@ -91,10 +91,9 @@ function displaySingleCharity(charityId, donationType){
 		dataType: "jsonp",
 		success: function(data){
 				var markers = populateMap(data);				
-				var mapOptions = {center: new google.maps.LatLng(markers[0][1], markers[0][2]),zoom: 5,mapTypeId: google.maps.MapTypeId.HYBRID};
-				var map = new google.maps.Map(document.getElementById("charityMap"),mapOptions);				
 				var pos = new google.maps.LatLng(markers[0][1], markers[0][2]);		
-				bounds.extend(pos);
+				var mapOptions = {center: pos,zoom: 5,mapTypeId: google.maps.MapTypeId.HYBRID};
+				var map = new google.maps.Map(document.getElementById("charityMap"),mapOptions);												
 				marker = new google.maps.Marker({
 					position: pos,
 					animation: google.maps.Animation.DROP,
