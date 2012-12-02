@@ -60,7 +60,7 @@
 	  <!-- Carousel items -->
 	  <div class="carousel-inner">
 		<div class="active item" id="causeTypeDiv">
-			<div class="slide-title">Select a Cause...</div>
+			<div class="slide-title">Find a Cause...</div>
 		</div>
 		<div class="item" id="searchContainerDiv">
 		  
