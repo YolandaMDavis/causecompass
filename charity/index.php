@@ -44,7 +44,7 @@ if(!charityId || !donationType) {
 CHARITY(charityId);
 
 //yup a hack....but it's a hackthon!
-if(donationType == 2){
+if(donationType == '2'){
 	$('#donateBtn').removeClass('hide');
 }
 </script>
