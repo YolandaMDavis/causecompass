@@ -60,10 +60,11 @@ $(function() {
 		});
 		$('#submitBtn').click(function(){
 			$('#donationSentModal').modal('show');
+			$('#donateSentBtn').click(function(){
+				window.location = 'http://causecompass.herokuapp.com';
+			});
 		});
-		$('#donateSentBtn').click(function(){
-			window.location = 'http://causecompass.herokuapp.com';
-		});
+		
 	}
 });
 </script>
