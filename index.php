@@ -24,6 +24,8 @@
 <!--Javascript library api  for google-->
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript" src="js/causes.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Vh5Fpo4NTBsqzOe_3XujusI8jMqvr3A&sensor=false"> </script>
 <title>Cause Compass</title>
 </head>
 <body>
@@ -45,43 +47,53 @@
 <div id="logo"></div>
 </div>
 
- <div id="wrap">
- <div class="container">
+ <div class="container" id="searchWizard">
 
-<div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item" id="causeTypeDiv">
-		<div class="slide-title">Select a Cause...</div>
-	</div>
-	<div class="item" id="searchContainerDiv">
-	  
-	  <div class="slide-title">	  
-	  <span class="span1">
-	  <a class="btn backBtn" href="#"><i class="icon-arrow-left"></i></a>
-	  </span>
-	  <span class="span4">
-	  What kind of donation are you giving?
-	  </span>
-	  </div>
-	</div>   
-    <div class="item" id="donationTypeDiv"> 
-	  <div class="slide-title">	 
-	  <span class="span1">
-	  <a class="btn backBtn" href="#"><i class="icon-arrow-left"></i></a>
-	  </span>
-	  <span class="span4">
-	  Where do you want to give?
-	  </span>
-	  </div>
-	  
-    </div>
-  </div>  
+	<div id="myCarousel" class="carousel slide">
+	  <!-- Carousel items -->
+	  <div class="carousel-inner">
+		<div class="active item" id="causeTypeDiv">
+			<div class="slide-title">Select a Cause...</div>
+		</div>
+		<div class="item" id="searchContainerDiv">
+		  
+		  <div class="slide-title">	  
+		  <span class="span1">
+		  <a class="btn backBtn" href="#"><i class="icon-arrow-left"></i></a>
+		  </span>
+		  <span class="span4">
+		  What kind of donation are you giving?
+		  </span>
+		  </div>
+		</div>   
+		<div class="item" id="donationTypeDiv"> 
+		  <div class="slide-title">	 
+		  <span class="span1">
+		  <a class="btn backBtn" href="#"><i class="icon-arrow-left"></i></a>
+		  </span>
+		  <span class="span4">
+		  Where do you want to give?
+		  </span>
+		  </div>
+		  
+		</div>
+	  </div>  
+	</div>	
+	
 </div>
 
+<div class="container hide" id="mapResults">
+<!---Begin Google Map-->	
+	<div class="row">
+		<div class="span2">	   
+			<table id="charityTable"></table>	  
+		</div>	  
+		<div class="span10">
+			<div id="charityMap" style="width: 100%; height: 75%">	  
+			</div>
+		</div>
+	</div>
 </div>
  
-</div>
-<!-- Put google map and list here =) -->
 </body>
 </html>

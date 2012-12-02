@@ -5,9 +5,13 @@ function populateMap(charityList){
 	
 	$(charityList).each(function(){		
 		charity = new Array();
-		charity.push(this.name);
-		charity.push(this.lat);
-		charity.push(this.long);
+		charity.push(this.charity_name);
+		charity.push(this.city_lat);
+		charity.push(this.city_long);
+		charity.push(this.street);
+		charity.push(this.cityname);
+		charity.push(this.State);
+		charity.push(this.phonenumber);
 		charityMarkers.push(charity);
 	});	
 	return charityMarkers;
@@ -51,24 +55,35 @@ function displayCharityList(charityList){
 	
 	$(charityList).each(function()
 	{
-		var row = '<tr><td>' + '<div id="charity_'+this.id+'">' 
-				   + '<a href="charirty/?c='+this.id+'">' + this.name + '</a>'+
-				  '<br>' + this.city + ', '+ this.state + '<br>' + '</div>' + '</td></tr>';
+		var row = '<tr><td>' + '<div id="charity_'+this.charity_id+'">' 
+				   + '<a href="charirty/?c='+this.charity_id+'">' + this.charity_name + '</a>'+
+				   '<br>' +this.street + 
+				  '<br>' + this.cityname + ', '+ this.State + '<br>' + 
+				  this.phonenumber + '<br>' +
+				  '</div>' + '</td></tr>';
 		$('#charityTable').append(row);
 				
 	});	
 	
 }
 
-function displaySearchResults(charityList){
-	renderGoogleMap('googleMap',charityList);
-	displayCharityList(charityList);
+
+function displaySearchResults(state,donationType,causeId){
+
+    var url = 'http://npbendre.com/causecompass/api.php?action=get_charity_list&cause_id='+causeId+'&state='+state+'&charity_type='+donationType;
 	
-}
-
-function getDummyCharities(){
-
-	return [{id:1,name:'Salvation ',short_desc:'Giving organization',city:'Atlanta',state:'Georgia',lat:-33.890542,long:151.274856},
-	{id:2,name:'Goodwill',short_desc:'Giving organization',city:'Atlanta',state:'Georgia',lat:-33.923036,long:151.259052}];
-
+	$.ajax(
+	{
+		url: url,
+		dataType: "jsonp",
+		success: function(data){
+				renderGoogleMap('googleMap',data);
+				displayCharityList(data);
+				$('#mapResults').removeClass('hide');
+			},
+		error: function(){
+			alert("Error loading the locations");
+		}
+	});	
+	
 }

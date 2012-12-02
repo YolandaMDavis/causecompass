@@ -23,9 +23,20 @@ text-align: center;
 	margin: 0 auto;
 	}
 
-#wrap .container{padding: 20px 15px 40px 15px;
+#searchWizard.container{padding: 20px 15px 40px 15px;
 margin: 30px auto 40px auto;
 width: 584px;
+border: 1px solid rgba(0, 0, 0, 0.2);
+background: rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 12px rgba(0, 0, 0, 0.15),0 1px 1px rgba(255, 255, 255, 0.1);
+text-align: center;
+border-radius: 10px;
+min-height:303px;
+}
+
+#mapResults{
+padding: 20px 15px 40px 15px;
+margin: 30px auto 40px auto;
 border: 1px solid rgba(0, 0, 0, 0.2);
 background: rgba(0, 0, 0, 0.05);
 box-shadow: inset 0 1px 12px rgba(0, 0, 0, 0.15),0 1px 1px rgba(255, 255, 255, 0.1);

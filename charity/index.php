@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="/style.css"/>
+<link type="text/css" rel="stylesheet" href="/css/causecompass.css"/>
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

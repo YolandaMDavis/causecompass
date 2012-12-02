@@ -64,6 +64,8 @@ $.ajax({
 			This should be used here: http://npbendre.com/causecompass/api.php?action=get_charity_list&cause_id=1&state=DC&charity_type=1
 			(same ajax calls as all the others)
 			*/
+			displaySearchResults(CC.state,CC.donation_type,CC.donation_type);
+			
 		});
 	},
 	error: function(){
