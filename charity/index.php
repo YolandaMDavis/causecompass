@@ -89,8 +89,55 @@ $(function() {
 		<div class="modal-header">
 			<h2>Submit In-Kind Donation</h2>
 		</div>
-		<div class="modal-body">
-		INSERT FORM CONTENT
+		<div class="modal-body">	
+		
+        <div class="control-group">
+            <label class="control-label">Title</label>
+
+            <div class="controls">
+                <select id="title" name="title"><option value=""></option><option value="RABBI">Rabbi</option><option value="BROTHER">Brother</option><option value="COL">Colonel</option><option value="DR">Dr.</option><option value="GEN">General</option><option value="FATHER">Father</option><option value="MR">Mr.</option><option value="MRS" selected="selected">Mrs.</option><option value="MS">Ms.</option><option value="REV">Reverend</option><option value="SISTER">Sister</option></select></div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">First Name</label>
+
+            <div class="controls">
+                <input id="firstName" name="firstName" class="input-xlarge" type="text" value=""></div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Middle Name</label>
+
+            <div class="controls">
+                <input id="middleName" name="middleName" class="input-xlarge" type="text" value=""></div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Last Name</label>
+
+            <div class="controls">
+                <input id="lastName" name="lastName" class="input-xlarge" type="text" value=""></div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Suffix</label>
+
+            <div class="controls">
+                <input id="suffix" name="suffix" class="input-mini" type="text" value=""></div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label">Email Address</label>
+            <div class="controls">
+                <input id="emailAddress" name="emailAddress" class="input-xlarge" type="text" value="">
+			</div>
+			<div class="controls">
+				input id="anonymous" type="checkbox" value="true" checked="checked">&nbsp;&nbsp; Anonymous Donation
+			</div>
+		</div>    
+	
+        </div>
 		</div>
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" id="cancelBtn">Cancel</button>
