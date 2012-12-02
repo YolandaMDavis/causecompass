@@ -58,6 +58,14 @@ $(function() {
 		$('#donateBtn').click(function(){
 			$('#inKindModal').modal('show');
 		});
+		$('#submitBtn').click(function(){
+			$('#donationSentModal').modal('show');
+		});
+		$('#donateSentBtn').click(function(){
+			$('#donationSentModal').modal('hide');
+			$('#inKindModal').modal('hide');
+			window.location = 'http://causecompass.herokuapp.com';
+		});
 	}
 });
 </script>
@@ -93,7 +101,7 @@ $(function() {
 	<h5>Web Site:<span id="link"><a></a></span></h5>
 	<br>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
-	<div id="inKindModal" class="modal container hide fade" data-backdrop="static">
+	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
 		<div class="modal-header">
 			<h2>Submit In-Kind Donation</h2>
 		</div>
@@ -156,6 +164,18 @@ $(function() {
 			<button class="btn btn-primary" id="submitBtn">Submit</button>
 		</div>
 	</div>
+	
+	  <div id="donationSentModal" class="modal hide fade" data-backdrop="static">
+            <div class="modal-header">
+                <h2>Thank you!</h2>
+            </div>
+            <div class="modal-body">
+            Thank you for your generous donation! Your charity has received your information and will contact you for further information.
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" id="donationSentBtn">Return Home</button>                
+            </div>
+        </div>
 
 </div>
 
