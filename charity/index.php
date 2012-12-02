@@ -62,8 +62,6 @@ $(function() {
 			$('#donationSentModal').modal('show');
 		});
 		$('#donateSentBtn').click(function(){
-			$('#donationSentModal').modal('hide');
-			$('#inKindModal').modal('hide');
 			window.location = 'http://causecompass.herokuapp.com';
 		});
 	}
