@@ -88,6 +88,29 @@
 	  </div>  
 	</div>	
 	
+	<div id="page_count">
+	<?php
+
+		if (file_exists('count')) 
+		{
+			$fil = fopen('count', r);
+			$dat = fread($fil, filesize('count')); 
+			echo $dat+1;
+			fclose($fil);
+			$fil = fopen('count', w);
+			fwrite($fil, $dat+1);
+		}
+
+		else
+		{
+			$fil = fopen('count', w);
+			fwrite($fil, 1);
+			echo '1';
+			fclose($fil);
+		}
+	?>
+	</div>
+	
 </div>
 
 <div class="container hide" id="mapResults">
@@ -120,29 +143,6 @@
 			}
 		);
 </script>
-
-<div id="page_count">
-<?php
-
-	if (file_exists('count')) 
-	{
-		$fil = fopen('count', r);
-		$dat = fread($fil, filesize('count')); 
-		echo $dat+1;
-		fclose($fil);
-		$fil = fopen('count', w);
-		fwrite($fil, $dat+1);
-	}
-
-	else
-	{
-		$fil = fopen('count', w);
-		fwrite($fil, 1);
-		echo '1';
-		fclose($fil);
-	}
-?>
-</div>
 
 </body>
 </html>
