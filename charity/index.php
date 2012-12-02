@@ -14,7 +14,7 @@
 
 <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css"/>
 <link type="text/css" rel="stylesheet" href="/jquery/jquery-bootstrap/jquery-ui-1.8.16.custom.css"/>
-<link type="text/css" rel="stylesheet" href="/tutorial.css"/>
+
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/jquery/jquery-ui-1.8.18.custom.min.js"></script>
@@ -67,7 +67,7 @@ CHARITY(charityId);
         </div>
       </div>
 </div>   
-<div class="container">
+<div class="container" id="charityDescription">
 	<label for="name">Charity Name</label>
 	<div id="name"></div>
 	<label for="desc">Description</label>
