@@ -57,15 +57,13 @@ $.ajax({
 			$('<button class="btn" id="'+state.State+'">'+state.State+'</button>').appendTo('#donationTypeDiv');
 		});
 		$('#donationTypeDiv .btn').click(function(){
-			CC.state = this.id;
-			/**
-			Yolanda, here is where you should set up your map data.
-			The relevant js data should be in CC.state, CC.donation_type, and CC.cause_id
-			This should be used here: http://npbendre.com/causecompass/api.php?action=get_charity_list&cause_id=1&state=DC&charity_type=1
-			(same ajax calls as all the others)
-			*/
-			displaySearchResults(CC.state,CC.donation_type,CC.donation_type);
-			
+			if(!$(this).hasClass('backBtn')){
+				CC.state = this.id;
+				displaySearchResults(CC.state,CC.donation_type,CC.donation_type);
+				
+				//window.location.href = '#mapResults'; //dynamic - no transition
+				$('html,body').animate({'scrollTop': 626},'slow');
+			}
 		});
 	},
 	error: function(){
