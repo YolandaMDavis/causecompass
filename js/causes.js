@@ -60,9 +60,13 @@ $.ajax({
 			if(!$(this).hasClass('backBtn')){
 				CC.state = this.id;
 				displaySearchResults(CC.state,CC.donation_type,CC.donation_type);
-				
+				var $elem = $('body');
 				//window.location.href = '#mapResults'; //dynamic - no transition
-				$('html,body').animate({'scrollTop': 626},'slow');
+				
+				$('html,body').animate({'scrollTop': $elem.height()},2000);
+								  				
+								
+				
 			}
 		});
 	},

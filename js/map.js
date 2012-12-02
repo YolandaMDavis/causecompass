@@ -1,4 +1,3 @@
-
 function populateMap(charityList){
 	var charityMarkers = new Array();
 	var charity;
@@ -19,17 +18,16 @@ function populateMap(charityList){
 
 function renderGoogleMap(mapId,charityList){
 
-	var markers = populateMap(charityList);
-	
-	var myOptions = {
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false
-    };
-	
-    var map = new google.maps.Map(document.getElementById("charityMap"),myOptions);
-    var infowindow = new google.maps.InfoWindow(); 
+	var markers = populateMap(charityList);		
     var marker, i;
     var bounds = new google.maps.LatLngBounds();
+	
+	var map = new google.maps.Map(document.getElementById("charityMap"),{	    
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
+	});
+
+	var infowindow = new google.maps.InfoWindow(); 
 
     for (i = 0; i < markers.length; i++) { 
         var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
@@ -40,19 +38,30 @@ function renderGoogleMap(mapId,charityList){
 			title: markers[i][0]
         });
         
-		google.maps.event.addListener(marker, 'click', function(marker, i) 
-		{
-            return function() {
-                infowindow.setContent(markers[i][0]);
-                infowindow.open(map, marker);
-            }
-        });
+		google.maps.event.addListener(marker, 'click', function() {
+			var marker = this;
+			var latLng = marker.getPosition();
+			infowindow.setContent('<h3>'+marker.getTitle()+'</h3>');
+			infowindow.open(map, marker);
+			}
+		);
     }	
-    map.fitBounds(bounds);		
+    map.fitBounds(bounds);
+	zoomChangeBoundsListener = 
+    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+        if (this.getZoom()){
+            this.setZoom(16);
+        }
+	});
+	google.maps.event.addListener(map, 'click', function() {
+      infoWindow.close();
+    });
+		
 }
 
 function displayCharityList(charityList){
 	
+	$('#charityTable').empty();
 	$(charityList).each(function()
 	{
 		var row = '<tr><td>' + '<div id="charity_'+this.charity_id+'">' 

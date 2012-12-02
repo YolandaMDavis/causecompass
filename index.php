@@ -91,5 +91,23 @@
 	</div>
 </div>
  
+<div style="display:none;" class="nav_up" id="nav_up"></div>
+<div style="display:none;" class="nav_down" id="nav_down"></div> 
+<script type="text/javascript">
+		$('#nav_up').fadeIn('slow');
+		$('#nav_down').fadeIn('slow');  
+		var $elem = $('body');
+		$('#nav_down').click(
+			function (e) {
+				$('html, body').animate({'scrollTop': $elem.height()},2000);
+			}
+		);
+		$('#nav_up').click(
+			function (e) {
+				$('html, body').animate({scrollTop: '0px'}, 2000);
+			}
+		);
+</script>
+
 </body>
 </html>
