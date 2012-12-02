@@ -82,6 +82,10 @@ margin: 4px 2px;
 border-radius: 2px;
 	}
 	
+	.btn {
+	margin: 10px 10px;
+	}
+	
 	
 	#splash_search_container{
 		position:relative;}
