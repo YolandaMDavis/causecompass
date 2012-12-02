@@ -49,7 +49,8 @@ function renderGoogleMap(mapId,charityList){
 		google.maps.event.addListener(marker, 'click', function() {
 			var marker = this;
 			var latLng = marker.getPosition();
-			infowindow.setContent('<table><tr><td><a href="#">'+marker.getTitle()+'</a></td></tr></table>');
+			var href = $("#charityTable a:contains('"+marker.getTitle()+"')").attr("href");
+			infowindow.setContent('<table><tr><td><a href="'+href+'">'+marker.getTitle()+'</a></td></tr></table>');
 			infowindow.setSize(new google.maps.Size(50,50));
 			infowindow.open(map, marker);
 			}
