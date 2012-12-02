@@ -144,6 +144,8 @@ $(function() {
 				</div>
 			</div>
            </div>
+		   <br>
+		   <br>
 		    <div class="control-group">
             <label class="control-label">Schedule Pickup: </label>
 
