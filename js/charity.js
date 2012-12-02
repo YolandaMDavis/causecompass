@@ -6,7 +6,7 @@
  * Populates info into charity.php page
  * Assumes element ids from charity.php
  */
-CHARITY = function(id){
+CHARITY = function(id, dId){
 	
 	var self = this;
 	
@@ -15,7 +15,7 @@ CHARITY = function(id){
 		self.ajaxUrl = "http://npbendre.com/causecompass/api.php?action=get_charity&charity_id=";
 		self.charityId = id;
 		self.ajax();
-		displaySingleCharity(self.charityId);
+		displaySingleCharity(self.charityId, dId);
 	};
 	
 	self.ajax = function(){

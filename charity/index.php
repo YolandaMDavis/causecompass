@@ -44,7 +44,7 @@ if(!charityId || !donationType) {
 	console.log("error loading charity page");
 }
 
-CHARITY(charityId);
+CHARITY(charityId, donationType);
 
 //yup a hack....but it's a hackthon!
 $(function() {
@@ -123,9 +123,6 @@ zipcode: "30022"
 	<br>
 	<h5>Web Site:<span id="link"><a target="_blank"></a></span></h5>
 	<br>
-	<div id="mapResults" class="hide">
-		<div id="charityMap"></div>
-	</div>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
 	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
 		<div class="modal-header">
@@ -208,6 +205,9 @@ zipcode: "30022"
                 <button class="btn" data-dismiss="modal" id="donationSentBtn">Return Home</button>                
             </div>
         </div>
+        <div id="mapResults" class="hide">
+			<div id="charityMap"></div>
+		</div>
 
 </div>
 

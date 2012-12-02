@@ -1,5 +1,6 @@
 
-body{background:url(http://2f-design.fr/themes/j_day_v1_3/images/patterns_dark/pattern_12.png)}
+/*body{background:url(http://2f-design.fr/themes/j_day_v1_3/images/patterns_dark/pattern_12.png)}*/
+body{background:url(/images/ccbg.jpg);}
  
 .light{ width: 100%;
 height: 630px;
