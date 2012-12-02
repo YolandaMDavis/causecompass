@@ -40,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="http://causecompasse.herokuapp.com/">Cause Compass</a>
+          <a class="brand" href="http://causecompass.herokuapp.com/">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="#">About Us</a></li>			               
