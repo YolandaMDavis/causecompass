@@ -207,7 +207,7 @@ zipcode: "30022"
             </div>
         </div>
         <div id="mapResults" class="hide">
-			<div id="charityMap"></div>
+			<div id="charityMap" style="width: 100%; height: 75%"></div>
 		</div>
 
 </div>
