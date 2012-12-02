@@ -35,7 +35,8 @@
  *       /index.php
  */
 var charityId = "<?=$_GET["c"]?>";
-if(!charityId) {
+var donationType = "<?=$_GET["t"]?>";
+if(!charityId || !donationType) {
 	//window.location.href = "/";
 	console.log("error loading charity page");
 }
@@ -67,11 +68,10 @@ CHARITY(charityId);
 </div>   
 <div class="container" id="charityDescription">		
 	<h1 id="name"></h1>	
-	<h3 id="desc"></h3>
-	<label for="phone">Phone Number</label>
-	<div id="phone"></div>
-	<label for="link">Charity's site</label>
-	<div id="link"><a>Donate here!</a></div>
+	<br>
+	<h3 id="desc"></h3>	
+	<b>Phone Number:</b><div id="phone"></div>
+	<b>Web Site:</b><div id="link"><a>Donate here!</a></div>
 </div>
 </body>
 </html>

@@ -59,13 +59,13 @@ function renderGoogleMap(mapId,charityList){
 		
 }
 
-function displayCharityList(charityList){
+function displayCharityList(charityList,donationType){
 	
 	$('#charityTable').empty();
 	$(charityList).each(function()
 	{
 		var row = '<tr><td>' + '<div id="charity_'+this.charity_id+'">' 
-				   + '<a href="charity/?c='+this.charity_id+'">' + this.charity_name + '</a>'+
+				   + '<a href="charity/?c='+this.charity_id+'&t='+donationType+'">' + this.charity_name + '</a>'+
 				   '<br>' +this.street + 
 				  '<br>' + this.cityname + ', '+ this.State + '<br>' + 
 				  this.phonenumber + '<br>' +
@@ -87,7 +87,7 @@ function displaySearchResults(state,donationType,causeId){
 		dataType: "jsonp",
 		success: function(data){
 				renderGoogleMap('googleMap',data);
-				displayCharityList(data);
+				displayCharityList(data,donationType);
 				$('#mapResults').removeClass('hide');
 			},
 		error: function(){
