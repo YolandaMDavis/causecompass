@@ -21,6 +21,7 @@
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/google-code-prettify/prettify.css" />
 <script type="text/javascript" src="/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="/js/gag.js"></script>
 
 <!--Javascript library api  for google-->
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
