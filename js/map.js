@@ -26,6 +26,13 @@ function renderGoogleMap(mapId,charityList){
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false
 	});
+	
+	zoomChangeBoundsListener = 
+    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+        if (this.getZoom()){
+            this.setZoom(16);
+        }
+	});
 
 	var infowindow = new google.maps.InfoWindow(); 
 
@@ -44,15 +51,10 @@ function renderGoogleMap(mapId,charityList){
 			infowindow.setContent('<h3>'+marker.getTitle()+'</h3>');
 			infowindow.open(map, marker);
 			}
-		);
+		);		
     }	
     map.fitBounds(bounds);
-	zoomChangeBoundsListener = 
-    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-        if (this.getZoom()){
-            this.setZoom(16);
-        }
-	});
+	
 	google.maps.event.addListener(map, 'click', function() {
       infowindow.close();
     });
