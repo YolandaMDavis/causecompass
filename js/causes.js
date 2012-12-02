@@ -33,7 +33,7 @@ $.ajax({
 });
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_all_state",
+	url: "http://npbendre.com/causecompass/api.php?action=get_all_locations",
 	dataType: "jsonp",
 	success: function(data){
 		CC.states = data;
@@ -44,7 +44,7 @@ $.ajax({
 });
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_all_donation_types",
+	url: "http://npbendre.com/causecompass/api.php?action=get_donation_types",
 	dataType: "jsonp",
 	success: function(data){
 		CC.donation_types = data;
