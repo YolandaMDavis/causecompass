@@ -47,6 +47,12 @@ CHARITY(charityId);
 
 //yup a hack....but it's a hackthon!
 $(function() {
+
+	$( "#datePicker" ).datepicker({
+		numberOfMonths: 2,
+		showButtonPanel: true
+	});
+
 	if(donationType == "2"){
 		$('#donateBtn').removeClass('hide');
 		$('#donateBtn').click(function(){
@@ -87,7 +93,7 @@ $(function() {
 	<h5>Web Site:<span id="link"><a></a></span></h5>
 	<br>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
-	<div id="inKindModal" class="modal container hide fade" data-backdrop="static">
+	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
 		<div class="modal-header">
 			<h2>Submit In-Kind Donation</h2>
 		</div>
@@ -107,7 +113,43 @@ $(function() {
                 <input id="lastName" name="lastName" class="input-xlarge" type="text" value=""></div>
         </div>
           
-        
+		   <div class="control-group">
+            <label class="control-label">Email</label>
+
+            <div class="controls">
+                <input id="email" name="email" class="input-xlarge" type="text" value=""></div>
+			</div>
+          
+		   <div class="control-group">
+            <label class="control-label">Address 1</label>
+
+            <div class="controls">
+                <input id="addr1" name="addr1" class="input-xlarge" type="text" value=""></div>
+			</div>
+			
+			 <div class="control-group">
+            <label class="control-label">Address 2</label>
+
+            <div class="controls">
+                <input id="addr2" name="addr2" class="input-xlarge" type="text" value=""></div>
+			</div>
+			
+			 <div class="control-group">
+            <label class="control-label">Zip Code</label>
+
+            <div class="controls">
+                <input id="zip" name="zip" class="input-xlarge" type="text" value="">
+				
+				</div>
+			</div>
+          
+		    <div class="control-group">
+            <label class="control-label">Schedule Pickup: </label>
+
+            <div class="controls">
+                <input id="datePicker" name="datePicker" class="input-xlarge" type="text" value=""></div>
+			</div>
+                                     
 		</div>
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" id="cancelBtn">Cancel</button>
