@@ -57,7 +57,7 @@ CHARITY(charityId);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Cause Compass</a>
+          <a class="brand" href="http://causecompasse.herokuapp.com/">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="#">About Us</a></li>			               
@@ -70,8 +70,10 @@ CHARITY(charityId);
 	<h1 id="name"></h1>	
 	<br>
 	<h3 id="desc"></h3>	
-	<b>Phone Number:</b><b id="phone"></b>
-	<b>Web Site:</b><b id="link"><a>Donate here!</a></b>
+	<br>
+	<h5>Phone Number:<span id="phone"></span></h5>	
+	<br>
+	<h5>Web Site:<span id="link"><a>Donate here!</a></span></h5>
 </div>
 </body>
 </html>
