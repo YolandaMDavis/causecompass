@@ -70,8 +70,8 @@ CHARITY(charityId);
 	<h1 id="name"></h1>	
 	<br>
 	<h3 id="desc"></h3>	
-	<b>Phone Number:</b><div id="phone"></div>
-	<b>Web Site:</b><div id="link"><a>Donate here!</a></div>
+	<b>Phone Number:</b><b id="phone"></b>
+	<b>Web Site:</b><b id="link"><a>Donate here!</a></b>
 </div>
 </body>
 </html>
