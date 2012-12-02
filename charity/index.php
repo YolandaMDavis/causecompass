@@ -113,7 +113,7 @@ zipcode: "30022"
 	<br>
 	<h3 id="desc"></h3>	
 	<br>
-	<h5>Address:<span id="addr"></span></h5>	
+	<h5>Address:<span id="stree"></span><br><span id="addr"></span></h5>	
 	<br>
 	<h5>Additional Info:<span id="info"></span></h5>	
 	<br>

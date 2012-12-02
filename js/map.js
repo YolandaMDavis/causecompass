@@ -111,6 +111,9 @@ function displaySearchResults(state,donationType,causeId){
 		dataType: "jsonp",
 		success: function(data){
 				renderGoogleMap('googleMap',data);
+				if(data.length == 0) {
+					displayAllResults(donationType);
+				}
 				displayCharityList(data,donationType);
 				$('#mapResults').removeClass('hide');
 			},
@@ -120,3 +123,26 @@ function displaySearchResults(state,donationType,causeId){
 	});	
 	
 }
+
+
+function displayAllResults(donationType){
+
+	var url = 'http://npbendre.com/causecompass/api.php?action=get_all_charities'
+	
+	$.ajax(
+	{
+		url: url,
+		dataType: "jsonp",
+		success: function(data){
+				renderGoogleMap('googleMap',data);
+				displayCharityList(data,donationType);
+				$('#mapResults').removeClass('hide');
+			},
+		error: function(){
+			alert("Error loading the locations");
+		}
+	});	
+	
+}
+
+

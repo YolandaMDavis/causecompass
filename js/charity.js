@@ -41,7 +41,7 @@ CHARITY = function(id){
 		$('#info').html(data.additional_info);
 		$('#info').html(data.emailaddress);
 		$('#street').html(data.street);
-		$('#city').html(data.city);
+		$('#addr').html(data.cityname + " "+data.State+" "+data.zipcode);
 		$('#phone').html(data.phonenumber);
 		$('#link a').attr('href', data.website_link);
 		$('#link a').html(data.website_link);
