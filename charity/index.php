@@ -86,7 +86,7 @@ $(function() {
           <a class="brand" href="http://causecompass.herokuapp.com/">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="#">About Us</a></li>			               
+              <li><a href="/about/">About Us</a></li>			               
             </ul>
           </div>
         </div>
@@ -99,7 +99,7 @@ $(function() {
 	<br>
 	<h5>Phone Number:<span id="phone"></span></h5>	
 	<br>
-	<h5>Web Site:<span id="link"><a></a></span></h5>
+	<h5>Web Site:<span id="link"><a target="_blank"></a></span></h5>
 	<br>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
 	<div id="inKindModal" class="modal hide fade" data-backdrop="static">

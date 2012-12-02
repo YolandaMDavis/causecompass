@@ -35,6 +35,7 @@ CHARITY = function(id){
 	
 	self.populate = function(data){
 		console.log("populating data");
+		console.log(data);
 		$('#name').html(data.charity_name);
 		$('#desc').html(data.additional_info);
 		$('#phone').html(data.phonenumber);

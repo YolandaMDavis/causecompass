@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -43,7 +44,7 @@
           <a class="brand" href="http://causecompass.herokuapp.com/">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="#">About Us</a></li>			               
+              <li><a href="/about/">About Us</a></li>			               
             </ul>
           </div>
         </div>
@@ -119,6 +120,29 @@
 			}
 		);
 </script>
+
+<div id="page_count">
+<?php
+
+	if (file_exists('count')) 
+	{
+		$fil = fopen('count', r);
+		$dat = fread($fil, filesize('count')); 
+		echo $dat+1;
+		fclose($fil);
+		$fil = fopen('count', w);
+		fwrite($fil, $dat+1);
+	}
+
+	else
+	{
+		$fil = fopen('count', w);
+		fwrite($fil, 1);
+		echo '1';
+		fclose($fil);
+	}
+?>
+</div>
 
 </body>
 </html>
