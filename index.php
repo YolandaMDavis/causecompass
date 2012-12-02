@@ -115,7 +115,7 @@
 <div class="container hide" id="mapResults">
 <!---Begin Google Map-->	
 	<div class="row">
-		<div class="span2">	   
+		<div class="span2" id="charityTableCont">	   
 			<table id="charityTable"></table>	  
 		</div>	  
 		<div class="span10">

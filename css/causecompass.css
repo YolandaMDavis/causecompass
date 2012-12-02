@@ -178,3 +178,9 @@ color: #FFFFFF;
 	color: #666;
 	font-size: 10px;
 }
+
+#charityTableCont {
+	overflow:scroll;
+	max-height: 500px;
+	height:500px;
+}
