@@ -59,11 +59,11 @@ $(function() {
 			$('#inKindModal').modal('show');
 		});
 		$('#submitBtn').click(function(){
-			$('#donationSentModal').modal('show');
+			$('#donationSentModal').modal('show');			
 			$('#donationSentBtn').click(function(){
-				$('#donationSentModal').modal('hide');
-				$('#inKindModal').modal('hide');
-				window.location = 'http://causecompass.herokuapp.com';
+				$("body").fadeOut(1000, function(){
+					window.location = 'http://causecompass.herokuapp.com';
+				});
 			});
 		});
 		
