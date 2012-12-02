@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="/css/causecompass.css"/>
-
+<link type="text/css" rel="stylesheet" href="/css/bootstrap-modal.css"/>
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +28,8 @@
 
 <!-- Javascript for this page specifically -->
 <script type="text/javascript" src="/js/charity.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap-modalmanager.js"></script>
 <script type="text/javascript">
 /**
  * Note: this page requires being passed the parameter ?c={id}
@@ -85,7 +87,7 @@ $(function() {
 	<h5>Web Site:<span id="link"><a></a></span></h5>
 	<br>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
-	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
+	<div id="inKindModal" class="modal container hide fade" data-backdrop="static">
 		<div class="modal-header">
 			<h2>Submit In-Kind Donation</h2>
 		</div>
