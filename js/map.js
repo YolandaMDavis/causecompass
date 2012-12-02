@@ -56,7 +56,7 @@ function displayCharityList(charityList){
 	$(charityList).each(function()
 	{
 		var row = '<tr><td>' + '<div id="charity_'+this.charity_id+'">' 
-				   + '<a href="charirty/?c='+this.charity_id+'">' + this.charity_name + '</a>'+
+				   + '<a href="charity/?c='+this.charity_id+'">' + this.charity_name + '</a>'+
 				   '<br>' +this.street + 
 				  '<br>' + this.cityname + ', '+ this.State + '<br>' + 
 				  this.phonenumber + '<br>' +
