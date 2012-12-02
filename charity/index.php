@@ -43,6 +43,10 @@ if(!charityId || !donationType) {
 
 CHARITY(charityId);
 
+//yup a hack....but it's a hackthon!
+if(donationType == 2){
+	$('#donateBtn').removeAttr('hide');
+}
 </script>
 
 <title>Cause Compass</title>
@@ -73,7 +77,24 @@ CHARITY(charityId);
 	<br>
 	<h5>Phone Number:<span id="phone"></span></h5>	
 	<br>
-	<h5>Web Site:<span id="link"><a>Donate here!</a></span></h5>
+	<h5>Web Site:<span id="link"><a></a></span></h5>
+	<br>
+	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
+	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
+		<div class="modal-header">
+			<h2>Submit In-Kind Donation</h2>
+		</div>
+		<div class="modal-body">
+		INSERT FORM CONTENT
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" id="cancelBtn">Cancel</button>
+			<button class="btn btn-primary" id="submitBtn">Submit</button>
+		</div>
+	</div>
+
 </div>
+
+ 
 </body>
 </html>

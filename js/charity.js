@@ -39,6 +39,7 @@ CHARITY = function(id){
 		$('#desc').html(data.additional_info);
 		$('#phone').html(data.phonenumber);
 		$('#link a').attr('href', data.website_link);
+		$('#link a').html(data.website_link);
 	};
 	
 	
