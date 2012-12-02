@@ -47,6 +47,9 @@ CHARITY(charityId);
 $(function() {
 	if(donationType == "2"){
 		$('#donateBtn').removeClass('hide');
+		$('#donateBtn').click(function(){
+			$('#inKindModal').modal('show');
+		});
 	}
 });
 </script>
