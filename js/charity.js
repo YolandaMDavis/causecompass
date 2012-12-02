@@ -12,7 +12,7 @@ CHARITY = function(id){
 	
 	self.init = function(){
 		console.log("charity init");
-		self.ajaxUrl = "/tbd-load-charity";
+		self.ajaxUrl = "http://npbendre.com/causecompass/api.php?action=get_charity&charity_id=";
 		self.charityId = id;
 		self.ajax();
 	};
@@ -20,11 +20,8 @@ CHARITY = function(id){
 	self.ajax = function(){
 		console.log("pulling ajax from: "+self.ajaxUrl);
 		$.ajax({
-			url: self.ajaxUrl,
+			url: self.ajaxUrl + self.charityId,
 			type: "POST",
-			data: {
-				charityId : self.charityId
-			},
 			success: function(data){
 				console.log("ajax success!");
 				self.populate(data);
