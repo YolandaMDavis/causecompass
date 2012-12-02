@@ -15,6 +15,7 @@ CHARITY = function(id){
 		self.ajaxUrl = "http://npbendre.com/causecompass/api.php?action=get_charity&charity_id=";
 		self.charityId = id;
 		self.ajax();
+		displaySingleCharity(self.charityId);
 	};
 	
 	self.ajax = function(){
@@ -37,13 +38,29 @@ CHARITY = function(id){
 		console.log("populating data");
 		console.log(data);
 		$('#name').html(data.charity_name);
-		$('#desc').html(data.additional_info);
+		$('#info').html(data.additional_info);
+		$('#info').html(data.emailaddress);
+		$('#street').html(data.street);
+		$('#city').html(data.city);
 		$('#phone').html(data.phonenumber);
 		$('#link a').attr('href', data.website_link);
 		$('#link a').html(data.website_link);
 	};
-	
-	
+	/*
+	Country: "USA"
+	State: "GA"
+	additional_info: ""
+	charity_id: "9"
+	charity_name: "United Funding Inc"
+	city_lat: "34.0393"
+	city_long: "-84.2972"
+	cityname: "Alpharetta"
+	emailaddress: ""
+	phonenumber: "(678) 397-0800"
+	street: "3600 Mansell Road "
+	website_link: ""
+	zipcode: "30022
+	*/
 	self.init();
 };
 

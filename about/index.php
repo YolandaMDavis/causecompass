@@ -57,6 +57,7 @@
 	
 	<div>
 	<a href="http://www.rhok.org/problems/getting-more-funding-effective-nonprofits">RHoK problem statement</a>
+	<a href="https://github.com/YolandaMDavis/causecompass/">Source Code - Github Repo</a>
 	
 	</div>
 </div>

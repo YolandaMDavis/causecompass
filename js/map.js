@@ -81,6 +81,25 @@ function displayCharityList(charityList,donationType){
 	
 }
 
+function displaySingleCharity(charityId){
+
+	var url = 'http://npbendre.com/causecompass/api.php?action=get_charity&charity_id='+charityId;
+	
+	$.ajax(
+	{
+		url: url,
+		dataType: "jsonp",
+		success: function(data){
+				renderGoogleMap('googleMap',data);
+				displayCharityList(data,donationType);
+				$('#mapResults').removeClass('hide');
+			},
+		error: function(){
+			alert("Error loading the locations");
+		}
+	});	
+	
+}
 
 function displaySearchResults(state,donationType,causeId){
 

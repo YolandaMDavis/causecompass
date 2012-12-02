@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html;UTF-8"/>
@@ -28,8 +27,10 @@
 
 <!-- Javascript for this page specifically -->
 <script type="text/javascript" src="/js/charity.js"></script>
+<script type="text/javascript" src="/js/map.js"></script>
 <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="/bootstrap/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Vh5Fpo4NTBsqzOe_3XujusI8jMqvr3A&sensor=false"> </script>
 <script type="text/javascript">
 /**
  * Note: this page requires being passed the parameter ?c={id}
@@ -92,15 +93,39 @@ $(function() {
         </div>
       </div>
 </div>   
-<div class="container" id="charityDescription">		
+<div class="container" id="charityDescription">	
+<!-- 
+Country: "USA"
+State: "GA"
+additional_info: ""
+charity_id: "9"
+charity_name: "United Funding Inc"
+city_lat: "34.0393"
+city_long: "-84.2972"
+cityname: "Alpharetta"
+emailaddress: ""
+phonenumber: "(678) 397-0800"
+street: "3600 Mansell Road "
+website_link: ""
+zipcode: "30022"
+-->	
 	<h1 id="name"></h1>	
 	<br>
 	<h3 id="desc"></h3>	
 	<br>
+	<h5>Address:<span id="addr"></span></h5>	
+	<br>
+	<h5>Additional Info:<span id="info"></span></h5>	
+	<br>
 	<h5>Phone Number:<span id="phone"></span></h5>	
+	<br>
+	<h5>Email:<span id="email"></span></h5>	
 	<br>
 	<h5>Web Site:<span id="link"><a target="_blank"></a></span></h5>
 	<br>
+	<div id="mapResults" class="hide">
+		<div id="charityMap"></div>
+	</div>
 	<button class="btn btn-large btn-primary hide center" type="button" id="donateBtn">Donate Now!</button>
 	<div id="inKindModal" class="modal hide fade" data-backdrop="static">
 		<div class="modal-header">
