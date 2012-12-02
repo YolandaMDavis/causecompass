@@ -59,7 +59,7 @@ $.ajax({
 		$('#donationTypeDiv .btn').click(function(){
 			if(!$(this).hasClass('backBtn')){
 				CC.state = this.id;
-				displaySearchResults(CC.state,CC.donation_type,CC.donation_type);
+				displaySearchResults(CC.state,CC.donation_type,CC.cause_id);
 				var $elem = $('body');
 				//window.location.href = '#mapResults'; //dynamic - no transition
 				
