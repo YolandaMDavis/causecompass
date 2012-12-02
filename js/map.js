@@ -91,16 +91,18 @@ function displaySingleCharity(charityId, donationType){
 		dataType: "jsonp",
 		success: function(data){
 				var markers = populateMap(data);				
-				var mapOptions = {center: new google.maps.LatLng(markers[i][1], markers[i][2]),zoom: 5,mapTypeId: google.maps.MapTypeId.HYBRID};
+				var mapOptions = {center: new google.maps.LatLng(markers[0][1], markers[0][2]),zoom: 5,mapTypeId: google.maps.MapTypeId.HYBRID};
 				var map = new google.maps.Map(document.getElementById("charityMap"),mapOptions);				
-				var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);		
+				var pos = new google.maps.LatLng(markers[0][1], markers[0][2]);		
 				bounds.extend(pos);
 				marker = new google.maps.Marker({
 					position: pos,
 					animation: google.maps.Animation.DROP,
 					map: map,
-					title: markers[i][0]
-				});								
+					title: markers[0][0]
+				});		
+				$('#mapResults').removeClass('hide');
+				
 			},
 		error: function(){
 			alert("Error loading the location");
