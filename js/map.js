@@ -23,24 +23,25 @@ function renderGoogleMap(mapId,charityList){
     var bounds = new google.maps.LatLngBounds();
 	
 	var map = new google.maps.Map(document.getElementById("charityMap"),{	    
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
         mapTypeControl: false
 	});
 	
 	zoomChangeBoundsListener = 
     google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
         if (this.getZoom()){
-            this.setZoom(16);
+            this.setZoom(7);
         }
 	});
 
 	var infowindow = new google.maps.InfoWindow(); 
 
     for (i = 0; i < markers.length; i++) { 
-        var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);		
         bounds.extend(pos);
         marker = new google.maps.Marker({
             position: pos,
+			animation: google.maps.Animation.DROP,
             map: map,
 			title: markers[i][0]
         });
@@ -48,7 +49,8 @@ function renderGoogleMap(mapId,charityList){
 		google.maps.event.addListener(marker, 'click', function() {
 			var marker = this;
 			var latLng = marker.getPosition();
-			infowindow.setContent('<h3>'+marker.getTitle()+'</h3>');
+			infowindow.setContent('<table><tr><td><a href="#">'+marker.getTitle()+'</a></td></tr></table>');
+			infowindow.setSize(new google.maps.Size(50,50));
 			infowindow.open(map, marker);
 			}
 		);		
