@@ -88,7 +88,8 @@ $(function() {
           <a class="brand" href="http://causecompass.herokuapp.com/">Cause Compass</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="/about/">About Us</a></li>			               
+              <li><a href="/about/">About Us</a></li>	
+			  <li><a href="http://bit.ly/Vfiuaa">Contact Us</a></li>				  
             </ul>
           </div>
         </div>
