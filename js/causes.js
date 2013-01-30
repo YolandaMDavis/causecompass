@@ -15,7 +15,7 @@ CC.state = "";
 CC.donation_type = 0;
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_all_charities",
+	url: "http://pybendre.com/causecompass/api.php?action=get_all_charities",
 	dataType: "jsonp",
 	success: function(data){
 		console.log('loaded charities'+data);
@@ -27,7 +27,7 @@ $.ajax({
 });
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_all_cause",
+	url: "http://pybendre.com/causecompass/api.php?action=get_all_cause",
 	dataType: "jsonp",
 	success: function(data){
 		console.log('loaded causes');
@@ -47,7 +47,7 @@ $.ajax({
 });
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_all_locations",
+	url: "http://pybendre.com/causecompass/api.php?action=get_all_locations",
 	dataType: "jsonp",
 	success: function(data){
 		console.log('loaded locations');
@@ -76,7 +76,7 @@ $.ajax({
 });
 
 $.ajax({
-	url: "http://npbendre.com/causecompass/api.php?action=get_donation_types",
+	url: "http://pybendre.com/causecompass/api.php?action=get_donation_types",
 	dataType: "jsonp",
 	success: function(data){
 		console.log('loaded donation types');

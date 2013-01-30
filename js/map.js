@@ -83,7 +83,7 @@ function displayCharityList(charityList,donationType){
 
 function displaySingleCharity(charityId, donationType){
 
-	var url = 'http://npbendre.com/causecompass/api.php?action=get_charity&charity_id='+charityId;
+	var url = 'http://pybendre.com/causecompass/api.php?action=get_charity&charity_id='+charityId;
 	
 	$.ajax(
 	{
@@ -112,7 +112,7 @@ function displaySingleCharity(charityId, donationType){
 
 function displaySearchResults(state,donationType,causeId){
 
-    var url = 'http://npbendre.com/causecompass/api.php?action=get_charity_list&cause_id='+causeId+'&state='+state+'&charity_type='+donationType;
+    var url = 'http://pybendre.com/causecompass/api.php?action=get_charity_list&cause_id='+causeId+'&state='+state+'&charity_type='+donationType;
 	
 	$.ajax(
 	{
@@ -136,7 +136,7 @@ function displaySearchResults(state,donationType,causeId){
 
 function displayAllResults(donationType){
 
-	var url = 'http://npbendre.com/causecompass/api.php?action=get_all_charities'
+	var url = 'http://pybendre.com/causecompass/api.php?action=get_all_charities'
 	
 	$.ajax(
 	{

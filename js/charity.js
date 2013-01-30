@@ -12,7 +12,7 @@ CHARITY = function(id, dId){
 	
 	self.init = function(){
 		console.log("charity init");
-		self.ajaxUrl = "http://npbendre.com/causecompass/api.php?action=get_charity&charity_id=";
+		self.ajaxUrl = "http://pybendre.com/causecompass/api.php?action=get_charity&charity_id=";
 		self.charityId = id;
 		self.ajax();
 		displaySingleCharity(self.charityId, dId);
